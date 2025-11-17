@@ -61,7 +61,7 @@ body {
     position: relative;
 }
 
-.slide-track > * {
+.slide-track>* {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -71,16 +71,17 @@ body {
     display: none;
 }
 
-.slide-track > *:first-child {
+.slide-track>*:first-child {
     display: block;
 }
 
 /* Buttons */
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
     padding: 10px 14px;
@@ -93,12 +94,14 @@ body {
 .prev-btn {
     left: 10px;
 }
+
 .next-btn {
     right: 10px;
 }
 
-.prev-btn:hover, .next-btn:hover {
-    background: rgba(255,255,255,0.2);
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Section Titles */
@@ -119,6 +122,7 @@ body {
     color: white;
     font-weight: bold;
 }
+
 .more-btn:hover {
     background: #006fe0;
 }
@@ -129,11 +133,76 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
+
     .slideshow-container {
         height: 220px;
     }
+}
+
+/* ======= SOCIAL HEADER ======= */
+.social-header {
+    width: 100%;
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.social-header img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.social-header img:hover {
+    transform: scale(1.15);
+}
+
+.social-left a {
+    display: inline-block;
+}
+
+.social-right {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .social-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-right {
+        margin-top: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Phone number styling */
+.phone-number {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.phone-number:hover {
+    opacity: 0.7;
 }
