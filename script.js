@@ -1,25 +1,45 @@
-function initSlideshows() {
-    const slideshows = document.querySelectorAll('.slideshow');
+// Slideshow system with autoplay + manual buttons
+document.querySelectorAll(".slideshow-container").forEach(container => {
 
-    slideshows.forEach(slideshow => {
-        let slideIndex = 0;
-        const slides = slideshow.querySelectorAll('.slide');
+    const track = container.querySelector(".slide-track");
+    const slides = Array.from(track.children);
 
-        // show first slide
-        slides[0].style.display = "block";
+    let index = 0;
 
-        slideshow.querySelector('.prev').addEventListener("click", () => {
-            slides[slideIndex].style.display = "none";
-            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-            slides[slideIndex].style.display = "block";
-        });
+    function showSlide(i) {
+        slides.forEach(s => s.style.display = "none");
+        slides[i].style.display = "block";
+    }
 
-        slideshow.querySelector('.next').addEventListener("click", () => {
-            slides[slideIndex].style.display = "none";
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style.display = "block";
-        });
+    showSlide(index);
+
+    // Autoplay
+    let auto = setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+    }, 3000);
+
+    const prevBtn = container.querySelector(".prev-btn");
+    const nextBtn = container.querySelector(".next-btn");
+
+    function restartAuto() {
+        clearInterval(auto);
+        auto = setInterval(() => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        }, 3000);
+    }
+
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+        restartAuto();
     });
-}
 
-window.onload = initSlideshows;
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+        restartAuto();
+    });
+
+});

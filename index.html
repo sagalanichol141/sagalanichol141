@@ -1,117 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Unity Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas – Unity Game Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <h1 class="page-title">Nicholas – Unity Game Developer Portfolio</h1>
 
-    <!-- ================= PROJECT 1 ================= -->
-    <div class="project-card">
-        <h1 class="project-title">SiomaySimulator</h1>
-        <h3 class="project-subtitle">mobile game about managing "siomay" restaurant</h3>
+    <div class="grid-container">
 
-        <!-- IMAGE SLIDESHOW -->
-        <div class="slideshow">
-            <div class="slide"><img src="assets/project1/img1.jpg"></div>
-            <div class="slide"><img src="assets/project1/img2.jpg"></div>
-            <div class="slide"><img src="assets/project1/img3.jpg"></div>
-            <div class="slide"><img src="assets/project1/img4.jpg"></div>
-            <div class="slide"><img src="assets/project1/img5.jpg"></div>
-            <div class="slide"><img src="assets/project1/img6.jpg"></div>
+        <!-- ================================================================= -->
+        <!-- ========================= PROJECT 1 ============================== -->
+        <!-- ================================================================= -->
+        <div class="project-card">
+            <h2>SiomaySimulator</h2>
+            <p class="subtitle">mobile game about managing "siomay" restaurant</p>
 
-            <div class="prev">❮</div>
-            <div class="next">❯</div>
+            <div class="media-row">
+
+                <!-- IMAGE SLIDESHOW -->
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project1/img1.jpg">
+                        <img src="assets/project1/img2.jpg">
+                        <img src="assets/project1/img3.jpg">
+                        <img src="assets/project1/img4.jpg">
+                        <img src="assets/project1/img5.jpg">
+                        <img src="assets/project1/img6.jpg">
+                    </div>
+
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+                <!-- VIDEO SLIDESHOW -->
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+            <p class="section-title">Overview</p>
+            <p>
+                Game simulasi restoran FPP tentang mengelola warung siomay. 
+                Player memasak, melayani pelanggan, mengatur uang, dan mengembangkan bisnis.
+            </p>
+
+            <p class="section-title">My Role</p>
+            <p>Full stack – seluruh game dibuat sendiri.</p>
+
+            <p class="section-title">Tech Stack</p>
+            <p>Zenject, SOAP, Firebase, Unity Ads, Google Play IAP, AdMob</p>
+
+            <p class="section-title">Problem & Solution</p>
+            <p>
+                Script awal tidak modular sehingga sulit dites.  
+                Solusi: menggunakan Zenject untuk dependency injection.
+            </p>
+
+            <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing" target="_blank">
+                More About This Project
+            </a>
         </div>
 
-        <!-- VIDEO SLIDESHOW -->
-        <div class="slideshow">
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
+
+        <!-- ================================================================= -->
+        <!-- =================== PROJECT 2–6 (PLACEHOLDER) ==================== -->
+        <!-- ================================================================= -->
+
+        <!-- PROJECT 2 -->
+        <div class="project-card">
+            <h2>Project 2 (Placeholder)</h2>
+            <p class="subtitle">placeholder project</p>
+
+            <div class="media-row">
+
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project2/img1.jpg">
+                        <img src="assets/project2/img2.jpg">
+                        <img src="assets/project2/img3.jpg">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
             </div>
 
-            <div class="prev">❮</div>
-            <div class="next">❯</div>
+            <p class="section-title">Overview</p>
+            <p>Placeholder project...</p>
+
+            <a class="more-btn" href="#" target="_blank">More About This Project</a>
         </div>
 
-        <div class="section-title">Overview</div>
-        <p>
-            SiomaySimulator adalah game simulasi restoran FPP...
-        </p>
 
-        <div class="section-title">My Role</div>
-        <p>Full stack — semua dibuat sendiri.</p>
+        <!-- PROJECT 3 -->
+        <div class="project-card">
+            <h2>Project 3</h2>
+            <p class="subtitle">placeholder</p>
 
-        <div class="section-title">Tech Stack</div>
-        <p>Unity, Zenject, SOAP, Firebase, UnityAds, Google Play IAP, AdMob</p>
+            <div class="media-row">
 
-        <div class="section-title">Problem & Solution</div>
-        <p>Menggunakan Zenject untuk modularitas dan mempermudah testing.</p>
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project3/img1.jpg">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
 
-        <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing" target="_blank">
-            More About This Project →
-        </a>
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+            <p class="section-title">Overview</p>
+            <p>Placeholder...</p>
+
+            <a class="more-btn" href="#" target="_blank">More About This Project</a>
+        </div>
+
+
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+            <h2>Project 4</h2>
+            <p class="subtitle">placeholder</p>
+
+            <div class="media-row">
+
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project4/img1.jpg">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+            <p class="section-title">Overview</p>
+            <p>Placeholder...</p>
+
+            <a class="more-btn" href="#" target="_blank">More About This Project</a>
+        </div>
+
+
+        <!-- PROJECT 5 -->
+        <div class="project-card">
+            <h2>Project 5</h2>
+            <p class="subtitle">placeholder</p>
+
+            <div class="media-row">
+
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project5/img1.jpg">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+            <p class="section-title">Overview</p>
+            <p>Placeholder...</p>
+
+            <a class="more-btn" href="#" target="_blank">More About This Project</a>
+        </div>
+
+
+        <!-- PROJECT 6 -->
+        <div class="project-card">
+            <h2>Project 6</h2>
+            <p class="subtitle">placeholder</p>
+
+            <div class="media-row">
+
+                <div class="slideshow-container" data-type="img">
+                    <div class="slide-track">
+                        <img src="assets/project6/img1.jpg">
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+                <div class="slideshow-container" data-type="video">
+                    <div class="slide-track">
+                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+
+            </div>
+
+            <p class="section-title">Overview</p>
+            <p>Placeholder...</p>
+
+            <a class="more-btn" href="#" target="_blank">More About This Project</a>
+        </div>
+
     </div>
-
-
-    <!-- ================= PROJECT 2 (same template) ================= -->
-    <div class="project-card">
-        <h1 class="project-title">SiomaySimulator</h1>
-        <h3 class="project-subtitle">mobile game about managing "siomay" restaurant</h3>
-
-        <div class="slideshow">
-            <div class="slide"><img src="assets/project2/img1.jpg"></div>
-            <div class="slide"><img src="assets/project2/img2.jpg"></div>
-            <div class="slide"><img src="assets/project2/img3.jpg"></div>
-            <div class="slide"><img src="assets/project2/img4.jpg"></div>
-            <div class="slide"><img src="assets/project2/img5.jpg"></div>
-            <div class="slide"><img src="assets/project2/img6.jpg"></div>
-
-            <div class="prev">❮</div>
-            <div class="next">❯</div>
-        </div>
-
-        <div class="slideshow">
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="slide">
-                <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="prev">❮</div>
-            <div class="next">❯</div>
-        </div>
-
-        <div class="section-title">Overview</div>
-        <p>Game simulasi FPP tentang mengelola warung siomay...</p>
-
-        <div class="section-title">My Role</div>
-        <p>Full stack.</p>
-
-        <div class="section-title">Tech Stack</div>
-        <p>Zenject, Firebase, AdMob, UnityAds, Google Play IAP</p>
-
-        <div class="section-title">Problem & Solution</div>
-        <p>Modularitas dengan Zenject.</p>
-
-        <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing" target="_blank">
-            More About This Project →
-        </a>
-    </div>
-
-</div>
 
 <script src="script.js"></script>
 </body>
