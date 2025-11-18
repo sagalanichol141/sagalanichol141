@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas – Unity Game Developer Portfolio</title>
+    <title>Nicholas Sagala – Unity Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -54,20 +54,20 @@
         <!-- ========================= PROJECT 1 ============================== -->
         <!-- ================================================================= -->
         <div class="project-card">
-            <h2>SiomaySimulator</h2>
-            <p class="subtitle">mobile game about managing "siomay" restaurant</p>
+            <h2>Geospatial AI Map</h2>
+            <p class="subtitle">WebGPU app that like "Google Earth" but with AI, especially Geospatial AI</p>
 
             <div class="media-row">
 
                 <!-- IMAGE SLIDESHOW -->
                 <div class="slideshow-container" data-type="img">
                     <div class="slide-track">
-                        <img src="assets/project1/img1.jpg">
-                        <img src="assets/project1/img2.jpg">
-                        <img src="assets/project1/img3.jpg">
-                        <img src="assets/project1/img4.jpg">
-                        <img src="assets/project1/img5.jpg">
-                        <img src="assets/project1/img6.jpg">
+                        <img src="assets/project1/AtlasCensored.png">
+                        <img src="assets/project1/MercatorDataVis.png">
+                        <img src="assets/project1/RussellGlobe.png">
+                        <img src="assets/project1/RussellRussellCity.png">
+                        <img src="assets/project1/RussellEagle.png">
+                        <img src="assets/project1/RussellOffices.png">
                     </div>
 
                     <button class="prev-btn">&#10094;</button>
@@ -77,9 +77,12 @@
                 <!-- VIDEO SLIDESHOW -->
                 <div class="slideshow-container" data-type="video">
                     <div class="slide-track">
-                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
-                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
-                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/0-Sf0RmcyAs"></iframe>
+                        <iframe src="https://www.youtube.com/embed/64F3Pwuu7v8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/rA1ZNP25pwo"></iframe>
+                        <iframe src="https://www.youtube.com/embed/eEb9LOPpvT0"></iframe>
+                        <iframe src="https://www.youtube.com/embed/bRGrDQlLMd8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/dN81_n3aVnc"></iframe>
                     </div>
 
                     <button class="prev-btn">&#10094;</button>
@@ -90,23 +93,44 @@
 
             <p class="section-title">Overview</p>
             <p>
-                Game simulasi restoran FPP tentang mengelola warung siomay.
-                Player memasak, melayani pelanggan, mengatur uang, dan mengembangkan bisnis.
+                AI Assitant web app that focuses on story telling through the each world news, facilities, and cultures.
+                Utilize voice command to help user easier to navigate all the features.
+                Has it own LLM for data across the worlds and displayed through the globe and mercator visualization.
             </p>
 
             <p class="section-title">My Role</p>
-            <p>Full stack – seluruh game dibuat sendiri.</p>
+            <p>
+                Front End – Implement backend REST & GraphQL API for geocoding and other environment variables.
+            </p>
+            <p>
+                Map & Cinematic – Implement map navigation on globe and mercator, and creating procedural cinematic
+                movement for each facility (barracks, tourist attraction, government offices).
+            </p>
+            <p>
+                Voice Recognition – Creating speech recogniton system using html js & web view from unity,
+                also the command detection system with regex and fuzzy algorithm.
+            </p>
+            <p>
+                Video Player – Creating video player using html css js & web view from unity,
+                also implementing each video coordinates on to the globe & mercator.
+            </p>
+            <p>
+                Dev Tools – Responsible for creating editor dev tools so that other dev can works on my features easily.
+            </p>
+            <p>
+                Optimization & Modularity – Optimize the project through profiling and keep the features modular with SOAP.
+            </p>
 
             <p class="section-title">Tech Stack</p>
-            <p>Zenject, SOAP, Firebase, Unity Ads, Google Play IAP, AdMob</p>
+            <p>Playable API, Timeline, SOAP, MVCS, REST, GraphQL, HTML, JS, CSS, JSLIB, Fuzzy, Regex, WebSpeechAPI, Haversine, WebView</p>
 
             <p class="section-title">Problem & Solution</p>
             <p>
-                Script awal tidak modular sehingga sulit dites.
-                Solusi: menggunakan Zenject untuk dependency injection.
+                The first development scripts are still dependent to each other so it difficult to stich the features and test it.
+                Solution: Using SOAP (Scriptable Object Architecture Pattern) & MVCS to make each features more modular.
             </p>
 
-            <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing"
+            <a class="more-btn" href="https://drive.google.com/file/d/1GEPIk-f9eZATqnYrQyupqY75Gl2HjFSG/view?usp=sharing"
                 target="_blank">
                 More About This Project
             </a>
