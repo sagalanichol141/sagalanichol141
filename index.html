@@ -493,14 +493,19 @@
 
         <!-- PROJECT 6 -->
         <div class="project-card">
-            <h2>Project 6</h2>
-            <p class="subtitle">placeholder</p>
+            <h2>Zombie Shooter Roguelike</h2>
+            <p class="subtitle">Roguelike mobile game like vampire survivor but this zombie shooter in 3d.</p>
 
             <div class="media-row">
 
                 <div class="slideshow-container" data-type="img">
                     <div class="slide-track">
-                        <img src="assets/project6/img1.jpg">
+                        <img src="assets/project5/ss1.png">
+                        <img src="assets/project5/ss2.png">
+                        <img src="assets/project5/ss3.png">
+                        <img src="assets/project5/ss4.png">
+                        <img src="assets/project5/ss5.png">
+                        <img src="assets/project5/ss6.png">
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -508,7 +513,8 @@
 
                 <div class="slideshow-container" data-type="video">
                     <div class="slide-track">
-                        <iframe src="https://www.youtube.com/embed/lV0UJJlKa-8"></iframe>
+                        <iframe src="https://www.youtube.com/embed/XU7PuxBYjoI"></iframe>
+                        <iframe src="https://www.youtube.com/embed/EzeT8GUCTcY"></iframe>
                     </div>
                     <button class="prev-btn">&#10094;</button>
                     <button class="next-btn">&#10095;</button>
@@ -517,14 +523,56 @@
             </div>
 
             <p class="section-title">Overview</p>
-            <p>Placeholder...</p>
+            <p>
+                This game is more about chaotic and large swarm of zombies. More like bullet hell but in 3d.
+            </p>
 
-            <a class="more-btn" href="#" target="_blank">More About This Project</a>
+            <p class="section-title">My Role</p>
+            <p>
+                <b>Full Stack</b> - I develop it by my self using firebase backend for auth and storing user data.
+            </p>
+            </p>
+
+            <p class="section-title">Tech Stack</p>
+            <p>
+                Firebase, Unity Ads, Google Admob, Easy Save 3, SOAP, CSV
+            </p>
+
+            <p class="section-title">Problem & Solution</p>
+            <p>
+                <b>Problem:</b> Of course because of the swarm and large amount of zombies and vfx, i encounter the high
+                batching and high cpu usage and make fps drop easily in just 15 min of playing.
+            </p>
+            <p>
+                <b>Solution:</b> I found unity ECS Animation system and even though i did not use most of ECS/DOTS in my
+                game, i implement the core logic for my enemy AI (1 manager to controll all enemy that only contain
+                data) so this kinda my own version of ECS/DOTS, the performance boost up though.
+            </p>
+
+            <a class="more-btn" href="https://sagalanichol.itch.io/fov" target="_blank">
+                More About This Project
+            </a>
+
+            <!-- Play Store Warning Info -->
+            <div class="playstore-warning">
+                <p class="warning-title">⚠ Play Store Release Status</p>
+
+                <p>
+                    This game was previously <b>published on Google Play Store</b>.
+                    However, my Play Store developer account is currently
+                    <b>temporarily suspended</b> due to an ongoing identity verification process.
+                    Because of that, the Play Store link cannot be accessed for now.
+                </p>
+
+                <p>
+                    As proof, here is the screenshot from my Play Store console:
+                </p>
+
+                <img class="proof-image" src="assets/project6/proof.png" alt="Play Store Publish Proof">
+            </div>
         </div>
 
-    </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
