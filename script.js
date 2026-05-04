@@ -1,53 +1,82 @@
-// Slideshow system with autoplay ONLY FOR IMAGES + manual buttons for videos
-document.querySelectorAll(".slideshow-container").forEach(container => {
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize all slideshows
+    document.querySelectorAll(".slideshow-container").forEach(container => {
+        const type = container.dataset.type; // "img" or "video"
+        const track = container.querySelector(".slide-track");
+        // Convert children to real array and ensure they have 'slide' class
+        const slides = Array.from(track.children);
+        slides.forEach(slide => slide.classList.add('slide'));
+        
+        let index = 0;
+        let autoInterval = null;
+        
+        if(slides.length === 0) return;
 
-    const type = container.dataset.type; // "img" atau "video"
-    const track = container.querySelector(".slide-track");
-    const slides = Array.from(track.children);
+        // Show initial slide
+        slides[0].classList.add("active");
 
-    let index = 0;
+        function showSlide(i) {
+            slides.forEach(s => s.classList.remove("active"));
+            slides[i].classList.add("active");
+        }
 
-    function showSlide(i) {
-        slides.forEach(s => s.style.display = "none");
-        slides[i].style.display = "block";
-    }
+        // Auto slide ONLY for images
+        if (type === "img" && slides.length > 1) {
+            startAutoSlide();
+        }
 
-    showSlide(index);
+        function startAutoSlide() {
+            autoInterval = setInterval(() => {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+            }, 3500);
+        }
 
-    let auto = null;
+        function restartAutoSlide() {
+            if (type !== "img" || slides.length <= 1) return;
+            clearInterval(autoInterval);
+            startAutoSlide();
+        }
 
-    // =============================
-    // AUTO SLIDE KHUSUS GAMBAR SAJA
-    // =============================
-    if (type === "img") {
-        auto = setInterval(() => {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        }, 3000);
-    }
+        const prevBtn = container.querySelector(".prev-btn");
+        const nextBtn = container.querySelector(".next-btn");
 
-    const prevBtn = container.querySelector(".prev-btn");
-    const nextBtn = container.querySelector(".next-btn");
+        if(prevBtn) {
+            prevBtn.addEventListener("click", () => {
+                index = (index - 1 + slides.length) % slides.length;
+                showSlide(index);
+                restartAutoSlide();
+            });
+        }
 
-    function restartAuto() {
-        if (type !== "img") return; // VIDEO tidak restart autoplay karena tidak punya autoplay
-        clearInterval(auto);
-        auto = setInterval(() => {
-            index = (index + 1) % slides.length;
-            showSlide(index);
-        }, 3000);
-    }
-
-    prevBtn.addEventListener("click", () => {
-        index = (index - 1 + slides.length) % slides.length;
-        showSlide(index);
-        restartAuto();
+        if(nextBtn) {
+            nextBtn.addEventListener("click", () => {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+                restartAutoSlide();
+            });
+        }
+        
+        // Pause auto-slide on hover for better UX
+        if (type === "img") {
+            container.addEventListener('mouseenter', () => clearInterval(autoInterval));
+            container.addEventListener('mouseleave', () => restartAutoSlide());
+        }
     });
 
-    nextBtn.addEventListener("click", () => {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-        restartAuto();
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
+            if(target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-
 });
