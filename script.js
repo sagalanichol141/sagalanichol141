@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Convert children to real array and ensure they have 'slide' class
         const slides = Array.from(track.children);
         slides.forEach(slide => slide.classList.add('slide'));
-        
+
         let index = 0;
         let autoInterval = null;
-        
-        if(slides.length === 0) return;
+
+        if (slides.length === 0) return;
 
         // Show initial slide
         slides[0].classList.add("active");
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevBtn = container.querySelector(".prev-btn");
         const nextBtn = container.querySelector(".next-btn");
 
-        if(prevBtn) {
+        if (prevBtn) {
             prevBtn.addEventListener("click", () => {
                 index = (index - 1 + slides.length) % slides.length;
                 showSlide(index);
@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        if(nextBtn) {
+        if (nextBtn) {
             nextBtn.addEventListener("click", () => {
                 index = (index + 1) % slides.length;
                 showSlide(index);
                 restartAutoSlide();
             });
         }
-        
+
         // Pause auto-slide on hover for better UX
         if (type === "img") {
             container.addEventListener('mouseenter', () => clearInterval(autoInterval));
@@ -64,14 +64,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Tab Switching Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.tab;
+
+            // Update buttons
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update content sections
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === target) {
+                    content.classList.add('active');
+                }
+            });
+
+            // Scroll to top of content area on mobile
+            if (window.innerWidth <= 768) {
+                const mainLayout = document.querySelector('.main-layout');
+                if (mainLayout) {
+                    window.scrollTo({
+                        top: mainLayout.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
+
             const target = document.querySelector(targetId);
-            if(target) {
+            if (target) {
                 e.preventDefault();
                 target.scrollIntoView({
                     behavior: 'smooth'

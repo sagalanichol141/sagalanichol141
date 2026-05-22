@@ -57,489 +57,736 @@
         </div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title-main">Featured Projects</h2>
+    <div class="main-layout">
+        <nav class="side-tabs">
+            <button class="tab-btn active" data-tab="featured">
+                <span class="icon">🚀</span>
+                Featured Projects
+            </button>
+            <button class="tab-btn" data-tab="tooling">
+                <span class="icon">🛠️</span>
+                Technical Tooling
+            </button>
+        </nav>
 
-        <div class="grid-container">
+        <div class="container tab-content active" id="featured">
+            <h2 class="section-title-main">Featured Projects</h2>
 
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <h2>Geospatial AI Map</h2>
-                <p class="subtitle">WebGPU app that acts like "Google Earth" but infused with Geospatial AI.</p>
+            <div class="grid-container">
 
-                <div class="media-row">
-                    <!-- IMAGE SLIDESHOW -->
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project1/AtlasCensored.png" alt="Map">
-                            <img src="assets/project1/MercatorDataVis.png" alt="Map">
-                            <img src="assets/project1/RussellGlobe.png" alt="Map">
-                            <img src="assets/project1/RussellRussellCity.png" alt="Map">
-                            <img src="assets/project1/RussellEagle.png" alt="Map">
-                            <img src="assets/project1/RussellOffices.png" alt="Map">
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <h2>Geospatial AI Map</h2>
+                    <p class="subtitle">WebGPU app that acts like "Google Earth" but infused with Geospatial AI.</p>
+
+                    <div class="media-row">
+                        <!-- IMAGE SLIDESHOW -->
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project1/AtlasCensored.png" alt="Map">
+                                <img src="assets/project1/MercatorDataVis.png" alt="Map">
+                                <img src="assets/project1/RussellGlobe.png" alt="Map">
+                                <img src="assets/project1/RussellRussellCity.png" alt="Map">
+                                <img src="assets/project1/RussellEagle.png" alt="Map">
+                                <img src="assets/project1/RussellOffices.png" alt="Map">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
                         </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
+
+                        <!-- VIDEO SLIDESHOW -->
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/0-Sf0RmcyAs"></iframe>
+                                <iframe src="https://www.youtube.com/embed/64F3Pwuu7v8"></iframe>
+                                <iframe src="https://www.youtube.com/embed/rA1ZNP25pwo"></iframe>
+                                <iframe src="https://www.youtube.com/embed/eEb9LOPpvT0"></iframe>
+                                <iframe src="https://www.youtube.com/embed/bRGrDQlLMd8"></iframe>
+                                <iframe src="https://www.youtube.com/embed/dN81_n3aVnc"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
                     </div>
 
-                    <!-- VIDEO SLIDESHOW -->
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/0-Sf0RmcyAs"></iframe>
-                            <iframe src="https://www.youtube.com/embed/64F3Pwuu7v8"></iframe>
-                            <iframe src="https://www.youtube.com/embed/rA1ZNP25pwo"></iframe>
-                            <iframe src="https://www.youtube.com/embed/eEb9LOPpvT0"></iframe>
-                            <iframe src="https://www.youtube.com/embed/bRGrDQlLMd8"></iframe>
-                            <iframe src="https://www.youtube.com/embed/dN81_n3aVnc"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>AI Assistant web app that focuses on storytelling through world news, facilities, and
+                            cultures.
+                            Utilizes voice commands to help users navigate features. Features its own LLM for global
+                            data
+                            displayed through globe and mercator visualization.</p>
                     </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Front End:</b> Implemented backend REST & GraphQL APIs for geocoding.</p>
+                        <p><b>Map & Cinematic:</b> Global & mercator navigation, procedural cinematic movement.</p>
+                        <p><b>Voice Recognition:</b> Speech recognition via HTML JS & Unity WebView (Regex / Fuzzy
+                            logic).
+                        </p>
+                        <p><b>Video Player:</b> Video player via JS & WebView implementing custom coordinates on map.
+                        </p>
+                        <p><b>Dev Tools:</b> Editor dev tools to accelerate team workflow.</p>
+                        <p><b>Optimization:</b> Profiling and modularizing features with SOAP architecture.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Playable API, Timeline, SOAP, MVCS, REST, GraphQL, HTML/JS/CSS, JSLIB,
+                            Fuzzy,
+                            WebSpeechAPI, Haversine, WebView, Addressables.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> High coupling early in development made testing independent features
+                            difficult.
+                        </p>
+                        <p><b>Solution:</b> Restructured the architecture using SOAP (Scriptable Object Architecture
+                            Pattern) & MVCS to strictly decouple features.</p>
+                    </div>
+
+                    <a class="more-btn"
+                        href="https://drive.google.com/file/d/1GEPIk-f9eZATqnYrQyupqY75Gl2HjFSG/view?usp=sharing"
+                        target="_blank">View Detailed Project Document</a>
                 </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>AI Assistant web app that focuses on storytelling through world news, facilities, and cultures.
-                        Utilizes voice commands to help users navigate features. Features its own LLM for global data
-                        displayed through globe and mercator visualization.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Front End:</b> Implemented backend REST & GraphQL APIs for geocoding.</p>
-                    <p><b>Map & Cinematic:</b> Global & mercator navigation, procedural cinematic movement.</p>
-                    <p><b>Voice Recognition:</b> Speech recognition via HTML JS & Unity WebView (Regex / Fuzzy logic).
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <h2>Warwood: Gather & Battle</h2>
+                    <p class="subtitle">Mobile strategy RPG akin to Stick War, but rendered in a polished 2.5D
+                        perspective.
                     </p>
-                    <p><b>Video Player:</b> Video player via JS & WebView implementing custom coordinates on map.</p>
-                    <p><b>Dev Tools:</b> Editor dev tools to accelerate team workflow.</p>
-                    <p><b>Optimization:</b> Profiling and modularizing features with SOAP architecture.</p>
+
+                    <div class="media-row">
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project2/BattleScreen.png" alt="Screen">
+                                <img src="assets/project2/HomeScreen.png" alt="Screen">
+                                <img src="assets/project2/GameplayScreen.png" alt="Screen">
+                                <img src="assets/project2/VictoryScreen.png" alt="Screen">
+                                <img src="assets/project2/LevelScreen.png" alt="Screen">
+                                <img src="assets/project2/GachaScreen.png" alt="Screen">
+                                <img src="assets/project2/HeroesSelectionScreen.png" alt="Screen">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/OfG4Nt20YYw"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>Compile a deck of specialized troops, manage critical resources (gold, wood, iron), and
+                            strategically deploy workers/attackers in lane-based combat to conquer varying levels.
+                            Features
+                            a gacha system, unit upgrades, and IAPs.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Full Stack Developer:</b> End-to-end development integrating Firebase backend for robust
+                            user
+                            authentication and remote save states.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Zenject/Extenject, Firebase, Unity Ads, Google Play IAP, Admob, Easy Save
+                            3,
+                            FSM, MVC.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> In initial releases, local saves caused duplicate item acquisitions and
+                            failed
+                            IAP state tracking.</p>
+                        <p><b>Solution:</b> Migrated critical state management and auth to Firebase, securely validating
+                            IAP
+                            receipts serverside and preventing local manipulation.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/warwood-like-stickwar" target="_blank">Play
+                        on
+                        Itch.io</a>
+
+                    <div class="playstore-warning">
+                        <div class="warning-title">Google Play Store Release</div>
+
+                        <img class="proof-image" src="assets/project2/PlaystoreProof.png"
+                            alt="Play Store Publish Proof">
+                    </div>
                 </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Playable API, Timeline, SOAP, MVCS, REST, GraphQL, HTML/JS/CSS, JSLIB, Fuzzy,
-                        WebSpeechAPI, Haversine, WebView, Addressables.</p>
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <h2>Siomay Simulator</h2>
+                    <p class="subtitle">A cozy management simulation where you run a thriving "Siomay" business.</p>
+
+                    <div class="media-row">
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project3/ss1.png" alt="Screen">
+                                <img src="assets/project3/ss2.png" alt="Screen">
+                                <img src="assets/project3/ss3.png" alt="Screen">
+                                <img src="assets/project3/ss4.png" alt="Screen">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/duE9dmftXEc"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>Manage cooking, parking, customer service, and security to prevent theft. Features character
+                            progression, unlockable staff to assist operations, ad rewards, and monetization.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Full Stack Developer:</b> Sole developer handling systems programming, gameplay loops, UI,
+                            and
+                            backend data linking.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Zenject/Extenject, SOAP, Firebase, Unity Ads, Play IAP, Admob, Easy Save
+                            3,
+                            FSM, MVC, Addressables.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> Initially, hardcoded NPC AI scripting led to chaotic edge cases that were
+                            impossible to scale.</p>
+                        <p><b>Solution:</b> Rebuilt NPC logic entirely using robust Finite State Machines (FSM),
+                            drastically
+                            improving readability, scalability, and stability.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing"
+                        target="_blank">Play on Itch.io</a>
+
+                    <div class="playstore-warning">
+                        <div class="warning-title">Google Play Store Release</div>
+                        <img class="proof-image" src="assets/project3/Proof1.png" alt="Play Store Publish Proof">
+                    </div>
                 </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> High coupling early in development made testing independent features difficult.
+                <!-- PROJECT 4 -->
+                <div class="project-card">
+                    <h2>Siomay Simulator: First Person</h2>
+                    <p class="subtitle">The narrative-driven, first-person upgrade to the original Siomay Simulator.</p>
+
+                    <div class="media-row">
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project4/ss1.png" alt="Screen">
+                                <img src="assets/project4/ss2.png" alt="Screen">
+                                <img src="assets/project4/ss3.png" alt="Screen">
+                                <img src="assets/project4/ss4.png" alt="Screen">
+                                <img src="assets/project4/ss5.png" alt="Screen">
+                                <img src="assets/project4/ss6.png" alt="Screen">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/GxqEOmo-qKs"></iframe>
+                                <iframe src="https://www.youtube.com/embed/3mw-Lrzr-bc"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>Transitions the core gameplay loop into a first-person perspective, adding extensive
+                            narrative
+                            quests, hidden secrets, and explorable environments.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Full Stack Developer:</b> Architected the new first-person controller and expanded backend
+                            hooks for quest state persistence.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Zenject/Extenject, SOAP, Firebase, IAP, Admob, Easy Save 3, FSM, Custom
+                            CSV
+                            Importer Tools.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> Data management for dialogue, quests, and hidden items became unwieldy
+                            strictly
+                            using Unity ScriptableObjects.</p>
+                        <p><b>Solution:</b> Implemented a custom CSV parsing pipeline and built custom Editor scripts to
+                            visually manage and serialize mass narrative data within Unity.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing"
+                        target="_blank">Play on Itch.io</a>
+
+                    <div class="playstore-warning">
+                        <div class="warning-title">Google Play Store Release</div>
+                        <img class="proof-image" src="assets/project3/Proof1.png" alt="Play Store Publish Proof">
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="project-card">
+                    <h2>Fist of Vengeance</h2>
+                    <p class="subtitle">A brutal, physics-driven beat 'em up heavily inspired by Midnight Fight Express.
                     </p>
-                    <p><b>Solution:</b> Restructured the architecture using SOAP (Scriptable Object Architecture
-                        Pattern) & MVCS to strictly decouple features.</p>
+
+                    <div class="media-row">
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project5/ss1.png" alt="Screen">
+                                <img src="assets/project5/ss2.png" alt="Screen">
+                                <img src="assets/project5/ss3.png" alt="Screen">
+                                <img src="assets/project5/ss4.png" alt="Screen">
+                                <img src="assets/project5/ss5.png" alt="Screen">
+                                <img src="assets/project5/ss6.png" alt="Screen">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/XU7PuxBYjoI"></iframe>
+                                <iframe src="https://www.youtube.com/embed/EzeT8GUCTcY"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>Designed to deliver constant adrenaline hits, progressing through procedural enemy waves
+                            across
+                            diverse, destructible environments with numerous melee and ranged weapons.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Full Stack Combat Designer:</b> Sole developer focused heavily on combat feel, animation
+                            state
+                            machines, and input responsiveness.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Zenject/Extenject, Firebase, IAP, FSM, Unity New Input System,
+                            Cinemachine.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> Initial combat prototypes felt "floaty" lacking the punchy feedback necessary
+                            for
+                            the genre.</p>
+                        <p><b>Solution:</b> Overhauled combat "juice" by implementing hit stops, frame-skipping
+                            animations
+                            on impact, camera shakes, and an input buffering/prediction system for seamless combos.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/fov" target="_blank">Play on Itch.io</a>
+
+                    <div class="playstore-warning">
+                        <div class="warning-title">Google Play Store Release</div>
+                        <img class="proof-image" src="assets/project5/proof.png" alt="Play Store Publish Proof">
+                    </div>
                 </div>
 
-                <a class="more-btn"
-                    href="https://drive.google.com/file/d/1GEPIk-f9eZATqnYrQyupqY75Gl2HjFSG/view?usp=sharing"
-                    target="_blank">View Detailed Project Document</a>
+                <!-- PROJECT 6 -->
+                <div class="project-card">
+                    <h2>Zombie Shooter Roguelike</h2>
+                    <p class="subtitle">A 3D bullet-hell roguelike reminiscent of Vampire Survivors, fighting massive
+                        zombie
+                        swarms.</p>
+
+                    <div class="media-row">
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project6/ss1.png" alt="Screen">
+                                <img src="assets/project6/ss2.png" alt="Screen">
+                                <img src="assets/project6/ss3.png" alt="Screen">
+                                <img src="assets/project6/ss4.png" alt="Screen">
+                                <img src="assets/project6/ss5.png" alt="Screen">
+                                <img src="assets/project6/ss6.png" alt="Screen">
+                                <img src="assets/project6/ss7.png" alt="Screen">
+                                <img src="assets/project6/ss8.png" alt="Screen">
+                                <img src="assets/project6/ss9.png" alt="Screen">
+                                <img src="assets/project6/ss10.png" alt="Screen">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/tBhHSELhuVg"></iframe>
+                                <iframe src="https://www.youtube.com/embed/-_9VlMjxiWs"></iframe>
+                                <iframe src="https://www.youtube.com/embed/19idonBQGno"></iframe>
+                                <iframe src="https://www.youtube.com/embed/CkfwoFCoRXc"></iframe>
+                                <iframe src="https://www.youtube.com/embed/9dO44yQXMRA"></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>Survive chaotic hordes with dynamic weapon combos. Optimized deliberately to render hundreds
+                            of
+                            entities onscreen concurrently without cratering framerate on mobile devices.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Performance Engineer & Game Developer:</b> Built the game around mobile optimization
+                            techniques to sustain extreme entity counts.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Data-Oriented Design patterns, Unity Graphics APIs, GPU Instancing,
+                            Firebase,
+                            SOAP, CSV.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> Swarms containing hundreds of GameObjects destroyed mobile CPU performance
+                            via
+                            massive update loop overhead and batched draw call limits.</p>
+                        <p><b>Solution:</b> Designed a hybrid Data-Oriented system. Utilized Unity's underlying core
+                            logic
+                            concepts similar to ECS (using 1 manager storing raw data arrays for AI instead of
+                            standalone
+                            MonoBehaviours) directly boosting performance.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/zombie-roguelite" target="_blank">Play on
+                        Itch.io</a>
+
+                    <div class="playstore-warning">
+                        <div class="warning-title">Google Play Store Release</div>
+                        <img class="proof-image" src="assets/project6/proof.png" alt="Play Store Publish Proof">
+                    </div>
+                </div>
+
+                <!-- PROJECT 7 -->
+                <div class="project-card">
+                    <h2>God of War – Egypt Fanmade</h2>
+                    <p class="subtitle">A third-person combat prototype deeply inspired by God of War, set in a
+                        hand-crafted
+                        Egyptian mythological world.</p>
+
+                    <div class="media-row">
+                        <!-- GIF SLIDESHOW -->
+                        <div class="slideshow-container" data-type="img">
+                            <div class="slide-track">
+                                <img src="assets/project7/01.gif" alt="Combat Demo">
+                                <img src="assets/project7/02.gif" alt="Combat Demo">
+                                <img src="assets/project7/03.gif" alt="Combat Demo">
+                                <img src="assets/project7/04.gif" alt="Combat Demo">
+                                <img src="assets/project7/05.gif" alt="Combat Demo">
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+
+                        <!-- VIDEO SLIDESHOW -->
+                        <div class="slideshow-container" data-type="video">
+                            <div class="slide-track">
+                                <iframe src="https://www.youtube.com/embed/f0rRTMebs1c"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <button class="nav-btn prev-btn">&#10094;</button>
+                            <button class="nav-btn next-btn">&#10095;</button>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Overview</h3>
+                        <p>A fully original combat prototype built from the ground up, channeling the visceral,
+                            cinematic
+                            identity of God of War — reimagined in an Egyptian mythological setting. The core design
+                            goal
+                            was to engineer a system where every swing, dodge, and impact feels intentional, weighty,
+                            and
+                            deeply satisfying. This project serves as a technical showcase of advanced combat
+                            architecture.
+                        </p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">My Role</h3>
+                        <p><b>Full Stack Developer & Combat Designer:</b> Sole developer responsible for all aspects of
+                            the
+                            prototype — from engine architecture to final game feel polish.</p>
+                        <p><b>Combat Systems:</b> Designed and implemented the complete melee combat loop, including
+                            combo
+                            chains, input buffering, hit detection, and enemy reaction logic.</p>
+                        <p><b>Animation Engineering:</b> Integrated and rigged animation state machines for both player
+                            and
+                            enemies using Unity Animator with smooth blend trees and transition control.</p>
+                        <p><b>Game Feel & Feedback:</b> Applied advanced "juice" techniques — hit stops, camera shakes,
+                            screen vignettes on damage, directional sound design, and dynamic particle impact VFX to
+                            reinforce satisfying hits.</p>
+                        <p><b>Character Controller:</b> Architected a responsive, physics-aware third-person character
+                            controller with precise dodge rolls and movement acceleration curves.</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Tech Stack</h3>
+                        <p class="tech-stack">Unity, C#, FSM (Animator), Cinemachine, New Input System, Physics Layers,
+                            Custom Hit Detection, VFX Graph, Post Processing (URP).</p>
+                    </div>
+
+                    <div class="content-group">
+                        <h3 class="section-title">Problem & Solution</h3>
+                        <p><b>Problem:</b> Achieving the signature "weighty" combat feel of AAA titles like God of War
+                            is
+                            notoriously difficult — early builds felt too responsive and floaty, stripping the sense of
+                            impact from every action.</p>
+                        <p><b>Solution:</b> Implemented a layered feedback system: frame-precise hit-stop freezes on
+                            enemy
+                            contact, physics-based knockback with custom deceleration curves, carefully tuned animation
+                            exit
+                            times, and a predictive input buffer system that lets players queue their next attack during
+                            an
+                            animation — resulting in punchy, readable, and deeply satisfying combat.</p>
+                    </div>
+
+                    <a class="more-btn" href="https://sagalanichol.itch.io/god-of-war-egypt-edition-fanmade"
+                        target="_blank">Play on Itch.io</a>
+                </div>
+
             </div>
+        </div>
 
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-                <h2>Warwood: Gather & Battle</h2>
-                <p class="subtitle">Mobile strategy RPG akin to Stick War, but rendered in a polished 2.5D perspective.
-                </p>
+        <div class="container tab-content" id="tooling">
+            <h2 class="section-title-main">Technical Tooling Portfolio</h2>
+            <div class="tooling-grid">
+                <!-- TOOL 1 -->
+                <div class="tool-card">
+                    <div class="tool-top-row">
+                        <div class="tool-info-panel">
+                            <h2>Auto Setup Weapon & Character IK</h2>
+                            <p class="subtitle">Unity Editor tool for automated rigging, procedural walking, and weapon
+                                placement.</p>
 
-                <div class="media-row">
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project2/BattleScreen.png" alt="Screen">
-                            <img src="assets/project2/HomeScreen.png" alt="Screen">
-                            <img src="assets/project2/GameplayScreen.png" alt="Screen">
-                            <img src="assets/project2/VictoryScreen.png" alt="Screen">
-                            <img src="assets/project2/LevelScreen.png" alt="Screen">
-                            <img src="assets/project2/GachaScreen.png" alt="Screen">
-                            <img src="assets/project2/HeroesSelectionScreen.png" alt="Screen">
+                            <div class="content-group">
+                                <h3 class="section-title">Description</h3>
+                                <p>A comprehensive Unity Editor tool that eliminates the manual labor of setting up
+                                    Animation Rigging. It converts raw character models into interactive entities with
+                                    procedural walking and precise weapon handling in seconds.</p>
+                            </div>
                         </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
+
+                        <div class="tool-media-panel">
+                            <div class="large-video-container">
+                                <iframe src="https://www.youtube.com/embed/5mYV_O4U12c"
+                                    title="Auto Setup Weapon & Character IK Demo"></iframe>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/OfG4Nt20YYw"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
+                    <div class="tool-workflow-panel">
+                        <h3 class="section-title">Workflow / Flow</h3>
+                        <ul class="flow-list">
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">1</span>
+                                    <b>1-Click Character IK</b>
+                                    <p>Auto-generate rigging for arms, legs, and hands.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">2</span>
+                                    <b>Procedural Spider Walk</b>
+                                    <p>Humanoid-adapted spider walking logic.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">3</span>
+                                    <b>Smart Weapon Placement</b>
+                                    <p>Context-menu setup with real-time hand gizmos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">4</span>
+                                    <b>Visual Alignment</b>
+                                    <p>High-fidelity gizmos for precise hand positioning.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">5</span>
+                                    <b>Procedural Aiming</b>
+                                    <p>IK-based aiming with realistic posture.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>Compile a deck of specialized troops, manage critical resources (gold, wood, iron), and
-                        strategically deploy workers/attackers in lane-based combat to conquer varying levels. Features
-                        a gacha system, unit upgrades, and IAPs.</p>
+                <!-- TOOL 2 -->
+                <div class="tool-card">
+                    <div class="tool-top-row">
+                        <div class="tool-info-panel">
+                            <h2>Procedural Environment Designer</h2>
+                            <p class="subtitle">Node-based internal tool for Unity to generate biome-specific foliage
+                                and terrain details.</p>
+
+                            <div class="content-group">
+                                <h3 class="section-title">Description</h3>
+                                <p>An artist-friendly tool that uses noise functions and heightmap analysis to
+                                    procedurally place grass, rocks, and trees while respecting manually painted
+                                    exclusion zones.</p>
+                            </div>
+                        </div>
+
+                        <div class="tool-media-panel">
+                            <div class="large-video-container">
+                                <iframe src="https://www.youtube.com/embed/y6120QOlsfU"
+                                    title="Procedural Tool Demo"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-workflow-panel">
+                        <h3 class="section-title">Workflow / Flow</h3>
+                        <ul class="flow-list">
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">1</span>
+                                    <b>Sample Terrain</b>
+                                    <p>Reads mesh or terrain data for slope info.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">2</span>
+                                    <b>Noise Masking</b>
+                                    <p>Perlin/Simplex masks for natural clustering.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">3</span>
+                                    <b>Poisson Disk Sampling</b>
+                                    <p>Ensures uniform distribution without overlaps.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">4</span>
+                                    <b>GPU Instancing</b>
+                                    <p>High-performance instanced draws.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Full Stack Developer:</b> End-to-end development integrating Firebase backend for robust user
-                        authentication and remote save states.</p>
-                </div>
+                <!-- TOOL 3 -->
+                <div class="tool-card">
+                    <div class="tool-top-row">
+                        <div class="tool-info-panel">
+                            <h2>Advanced IK Bone Debugger</h2>
+                            <p class="subtitle">Real-time overlay tool for visualizing bone constraints, joint limits,
+                                and IK targets in Editor.</p>
 
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Zenject/Extenject, Firebase, Unity Ads, Google Play IAP, Admob, Easy Save 3,
-                        FSM, MVC.</p>
-                </div>
+                            <div class="content-group">
+                                <h3 class="section-title">Description</h3>
+                                <p>An essential tool for technical animators to debug character rigs. It provides visual
+                                    gizmos for rotation limits, velocity vectors, and target influence weights
+                                    directamente in scene view.</p>
+                            </div>
+                        </div>
 
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> In initial releases, local saves caused duplicate item acquisitions and failed
-                        IAP state tracking.</p>
-                    <p><b>Solution:</b> Migrated critical state management and auth to Firebase, securely validating IAP
-                        receipts serverside and preventing local manipulation.</p>
-                </div>
+                        <div class="tool-media-panel">
+                            <div class="large-video-container">
+                                <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw"
+                                    title="IK Debugger Demo"></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-                <a class="more-btn" href="https://sagalanichol.itch.io/warwood-like-stickwar" target="_blank">Play on
-                    Itch.io</a>
-
-                <div class="playstore-warning">
-                    <div class="warning-title">Google Play Store Release</div>
-
-                    <img class="proof-image" src="assets/project2/PlaystoreProof.png" alt="Play Store Publish Proof">
+                    <div class="tool-workflow-panel">
+                        <h3 class="section-title">Workflow / Flow</h3>
+                        <ul class="flow-list">
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">1</span>
+                                    <b>Rig Scanning</b>
+                                    <p>Detects SkinnedMeshRenderers and Bone hierarchies.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">2</span>
+                                    <b>Gizmo Injection</b>
+                                    <p>Uses Handles API to draw debug info.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">3</span>
+                                    <b>Data Overlay</b>
+                                    <p>Displays real-time Euler angles and weights.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">4</span>
+                                    <b>Save/Restore</b>
+                                    <p>Allows snapshots of poses for comparison.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-                <h2>Siomay Simulator</h2>
-                <p class="subtitle">A cozy management simulation where you run a thriving "Siomay" business.</p>
-
-                <div class="media-row">
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project3/ss1.png" alt="Screen">
-                            <img src="assets/project3/ss2.png" alt="Screen">
-                            <img src="assets/project3/ss3.png" alt="Screen">
-                            <img src="assets/project3/ss4.png" alt="Screen">
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/duE9dmftXEc"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>Manage cooking, parking, customer service, and security to prevent theft. Features character
-                        progression, unlockable staff to assist operations, ad rewards, and monetization.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Full Stack Developer:</b> Sole developer handling systems programming, gameplay loops, UI, and
-                        backend data linking.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Zenject/Extenject, SOAP, Firebase, Unity Ads, Play IAP, Admob, Easy Save 3,
-                        FSM, MVC, Addressables.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> Initially, hardcoded NPC AI scripting led to chaotic edge cases that were
-                        impossible to scale.</p>
-                    <p><b>Solution:</b> Rebuilt NPC logic entirely using robust Finite State Machines (FSM), drastically
-                        improving readability, scalability, and stability.</p>
-                </div>
-
-                <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing"
-                    target="_blank">Play on Itch.io</a>
-
-                <div class="playstore-warning">
-                    <div class="warning-title">Google Play Store Release</div>
-                    <img class="proof-image" src="assets/project3/Proof1.png" alt="Play Store Publish Proof">
-                </div>
-            </div>
-
-            <!-- PROJECT 4 -->
-            <div class="project-card">
-                <h2>Siomay Simulator: First Person</h2>
-                <p class="subtitle">The narrative-driven, first-person upgrade to the original Siomay Simulator.</p>
-
-                <div class="media-row">
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project4/ss1.png" alt="Screen">
-                            <img src="assets/project4/ss2.png" alt="Screen">
-                            <img src="assets/project4/ss3.png" alt="Screen">
-                            <img src="assets/project4/ss4.png" alt="Screen">
-                            <img src="assets/project4/ss5.png" alt="Screen">
-                            <img src="assets/project4/ss6.png" alt="Screen">
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/GxqEOmo-qKs"></iframe>
-                            <iframe src="https://www.youtube.com/embed/3mw-Lrzr-bc"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>Transitions the core gameplay loop into a first-person perspective, adding extensive narrative
-                        quests, hidden secrets, and explorable environments.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Full Stack Developer:</b> Architected the new first-person controller and expanded backend
-                        hooks for quest state persistence.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Zenject/Extenject, SOAP, Firebase, IAP, Admob, Easy Save 3, FSM, Custom CSV
-                        Importer Tools.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> Data management for dialogue, quests, and hidden items became unwieldy strictly
-                        using Unity ScriptableObjects.</p>
-                    <p><b>Solution:</b> Implemented a custom CSV parsing pipeline and built custom Editor scripts to
-                        visually manage and serialize mass narrative data within Unity.</p>
-                </div>
-
-                <a class="more-btn" href="https://sagalanichol.itch.io/siomay-tycoon-simulator-alpha-testing"
-                    target="_blank">Play on Itch.io</a>
-
-                <div class="playstore-warning">
-                    <div class="warning-title">Google Play Store Release</div>
-                    <img class="proof-image" src="assets/project3/Proof1.png" alt="Play Store Publish Proof">
-                </div>
-            </div>
-
-            <!-- PROJECT 5 -->
-            <div class="project-card">
-                <h2>Fist of Vengeance</h2>
-                <p class="subtitle">A brutal, physics-driven beat 'em up heavily inspired by Midnight Fight Express.</p>
-
-                <div class="media-row">
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project5/ss1.png" alt="Screen">
-                            <img src="assets/project5/ss2.png" alt="Screen">
-                            <img src="assets/project5/ss3.png" alt="Screen">
-                            <img src="assets/project5/ss4.png" alt="Screen">
-                            <img src="assets/project5/ss5.png" alt="Screen">
-                            <img src="assets/project5/ss6.png" alt="Screen">
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/XU7PuxBYjoI"></iframe>
-                            <iframe src="https://www.youtube.com/embed/EzeT8GUCTcY"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>Designed to deliver constant adrenaline hits, progressing through procedural enemy waves across
-                        diverse, destructible environments with numerous melee and ranged weapons.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Full Stack Combat Designer:</b> Sole developer focused heavily on combat feel, animation state
-                        machines, and input responsiveness.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Zenject/Extenject, Firebase, IAP, FSM, Unity New Input System, Cinemachine.
-                    </p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> Initial combat prototypes felt "floaty" lacking the punchy feedback necessary for
-                        the genre.</p>
-                    <p><b>Solution:</b> Overhauled combat "juice" by implementing hit stops, frame-skipping animations
-                        on impact, camera shakes, and an input buffering/prediction system for seamless combos.</p>
-                </div>
-
-                <a class="more-btn" href="https://sagalanichol.itch.io/fov" target="_blank">Play on Itch.io</a>
-
-                <div class="playstore-warning">
-                    <div class="warning-title">Google Play Store Release</div>
-                    <img class="proof-image" src="assets/project5/proof.png" alt="Play Store Publish Proof">
-                </div>
-            </div>
-
-            <!-- PROJECT 6 -->
-            <div class="project-card">
-                <h2>Zombie Shooter Roguelike</h2>
-                <p class="subtitle">A 3D bullet-hell roguelike reminiscent of Vampire Survivors, fighting massive zombie
-                    swarms.</p>
-
-                <div class="media-row">
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project6/ss1.png" alt="Screen">
-                            <img src="assets/project6/ss2.png" alt="Screen">
-                            <img src="assets/project6/ss3.png" alt="Screen">
-                            <img src="assets/project6/ss4.png" alt="Screen">
-                            <img src="assets/project6/ss5.png" alt="Screen">
-                            <img src="assets/project6/ss6.png" alt="Screen">
-                            <img src="assets/project6/ss7.png" alt="Screen">
-                            <img src="assets/project6/ss8.png" alt="Screen">
-                            <img src="assets/project6/ss9.png" alt="Screen">
-                            <img src="assets/project6/ss10.png" alt="Screen">
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/tBhHSELhuVg"></iframe>
-                            <iframe src="https://www.youtube.com/embed/-_9VlMjxiWs"></iframe>
-                            <iframe src="https://www.youtube.com/embed/19idonBQGno"></iframe>
-                            <iframe src="https://www.youtube.com/embed/CkfwoFCoRXc"></iframe>
-                            <iframe src="https://www.youtube.com/embed/9dO44yQXMRA"></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>Survive chaotic hordes with dynamic weapon combos. Optimized deliberately to render hundreds of
-                        entities onscreen concurrently without cratering framerate on mobile devices.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Performance Engineer & Game Developer:</b> Built the game around mobile optimization
-                        techniques to sustain extreme entity counts.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Data-Oriented Design patterns, Unity Graphics APIs, GPU Instancing, Firebase,
-                        SOAP, CSV.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> Swarms containing hundreds of GameObjects destroyed mobile CPU performance via
-                        massive update loop overhead and batched draw call limits.</p>
-                    <p><b>Solution:</b> Designed a hybrid Data-Oriented system. Utilized Unity's underlying core logic
-                        concepts similar to ECS (using 1 manager storing raw data arrays for AI instead of standalone
-                        MonoBehaviours) directly boosting performance.</p>
-                </div>
-
-                <a class="more-btn" href="https://sagalanichol.itch.io/zombie-roguelite" target="_blank">Play on
-                    Itch.io</a>
-
-                <div class="playstore-warning">
-                    <div class="warning-title">Google Play Store Release</div>
-                    <img class="proof-image" src="assets/project6/proof.png" alt="Play Store Publish Proof">
-                </div>
-            </div>
-
-            <!-- PROJECT 7 -->
-            <div class="project-card">
-                <h2>God of War – Egypt Fanmade</h2>
-                <p class="subtitle">A third-person combat prototype deeply inspired by God of War, set in a hand-crafted
-                    Egyptian mythological world.</p>
-
-                <div class="media-row">
-                    <!-- GIF SLIDESHOW -->
-                    <div class="slideshow-container" data-type="img">
-                        <div class="slide-track">
-                            <img src="assets/project7/01.gif" alt="Combat Demo">
-                            <img src="assets/project7/02.gif" alt="Combat Demo">
-                            <img src="assets/project7/03.gif" alt="Combat Demo">
-                            <img src="assets/project7/04.gif" alt="Combat Demo">
-                            <img src="assets/project7/05.gif" alt="Combat Demo">
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-
-                    <!-- VIDEO SLIDESHOW -->
-                    <div class="slideshow-container" data-type="video">
-                        <div class="slide-track">
-                            <iframe src="https://www.youtube.com/embed/f0rRTMebs1c"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                        <button class="nav-btn prev-btn">&#10094;</button>
-                        <button class="nav-btn next-btn">&#10095;</button>
-                    </div>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Overview</h3>
-                    <p>A fully original combat prototype built from the ground up, channeling the visceral, cinematic
-                        identity of God of War — reimagined in an Egyptian mythological setting. The core design goal
-                        was to engineer a system where every swing, dodge, and impact feels intentional, weighty, and
-                        deeply satisfying. This project serves as a technical showcase of advanced combat architecture.
-                    </p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">My Role</h3>
-                    <p><b>Full Stack Developer & Combat Designer:</b> Sole developer responsible for all aspects of the
-                        prototype — from engine architecture to final game feel polish.</p>
-                    <p><b>Combat Systems:</b> Designed and implemented the complete melee combat loop, including combo
-                        chains, input buffering, hit detection, and enemy reaction logic.</p>
-                    <p><b>Animation Engineering:</b> Integrated and rigged animation state machines for both player and
-                        enemies using Unity Animator with smooth blend trees and transition control.</p>
-                    <p><b>Game Feel & Feedback:</b> Applied advanced "juice" techniques — hit stops, camera shakes,
-                        screen vignettes on damage, directional sound design, and dynamic particle impact VFX to
-                        reinforce satisfying hits.</p>
-                    <p><b>Character Controller:</b> Architected a responsive, physics-aware third-person character
-                        controller with precise dodge rolls and movement acceleration curves.</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Tech Stack</h3>
-                    <p class="tech-stack">Unity, C#, FSM (Animator), Cinemachine, New Input System, Physics Layers,
-                        Custom Hit Detection, VFX Graph, Post Processing (URP).</p>
-                </div>
-
-                <div class="content-group">
-                    <h3 class="section-title">Problem & Solution</h3>
-                    <p><b>Problem:</b> Achieving the signature "weighty" combat feel of AAA titles like God of War is
-                        notoriously difficult — early builds felt too responsive and floaty, stripping the sense of
-                        impact from every action.</p>
-                    <p><b>Solution:</b> Implemented a layered feedback system: frame-precise hit-stop freezes on enemy
-                        contact, physics-based knockback with custom deceleration curves, carefully tuned animation exit
-                        times, and a predictive input buffer system that lets players queue their next attack during an
-                        animation — resulting in punchy, readable, and deeply satisfying combat.</p>
-                </div>
-
-                <a class="more-btn" href="https://sagalanichol.itch.io/god-of-war-egypt-edition-fanmade"
-                    target="_blank">Play on Itch.io</a>
-            </div>
-
         </div>
     </div>
+
 
     <script src="script.js"></script>
 </body>
