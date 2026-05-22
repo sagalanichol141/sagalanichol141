@@ -670,22 +670,22 @@
                 <div class="tool-card">
                     <div class="tool-top-row">
                         <div class="tool-info-panel">
-                            <h2>Procedural Environment Designer</h2>
-                            <p class="subtitle">Node-based internal tool for Unity to generate biome-specific foliage
-                                and terrain details.</p>
+                            <h2>Seamless Blender-to-Unity Pipeline</h2>
+                            <p class="subtitle">Python-based Blender add-on and Unity Editor importer for automated
+                                asset synchronization.</p>
 
                             <div class="content-group">
                                 <h3 class="section-title">Description</h3>
-                                <p>An artist-friendly tool that uses noise functions and heightmap analysis to
-                                    procedurally place grass, rocks, and trees while respecting manually painted
-                                    exclusion zones.</p>
+                                <p>A robust bridge between Blender and Unity that handles axis correction, automated LOD
+                                    generation, and intelligent material mapping. It streamlines the export-import loop,
+                                    saving hours of manual setup for every asset.</p>
                             </div>
                         </div>
 
                         <div class="tool-media-panel">
                             <div class="large-video-container">
-                                <iframe src="https://www.youtube.com/embed/y6120QOlsfU"
-                                    title="Procedural Tool Demo"></iframe>
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    title="Blender-to-Unity Pipeline Demo"></iframe>
                             </div>
                         </div>
                     </div>
@@ -696,29 +696,30 @@
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">1</span>
-                                    <b>Sample Terrain</b>
-                                    <p>Reads mesh or terrain data for slope info.</p>
+                                    <b>Python Export Add-on</b>
+                                    <p>Automated axis correction, scaling, and auto-generated LODs in Blender.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">2</span>
-                                    <b>Noise Masking</b>
-                                    <p>Perlin/Simplex masks for natural clustering.</p>
+                                    <b>Temp Folder Watcher</b>
+                                    <p>Unity Editor tool detects new FBX files in the "Temp" assets directory.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">3</span>
-                                    <b>Poisson Disk Sampling</b>
-                                    <p>Ensures uniform distribution without overlaps.</p>
+                                    <b>Extract & Organize</b>
+                                    <p>Auto-extracts materials/textures and moves them to organized project folders.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">4</span>
-                                    <b>GPU Instancing</b>
-                                    <p>High-performance instanced draws.</p>
+                                    <b>Smart Preset Mapping</b>
+                                    <p>Assigns custom material presets and intelligently maps textures to shader
+                                        properties.</p>
                                 </div>
                             </li>
                         </ul>
@@ -729,22 +730,22 @@
                 <div class="tool-card">
                     <div class="tool-top-row">
                         <div class="tool-info-panel">
-                            <h2>Advanced IK Bone Debugger</h2>
-                            <p class="subtitle">Real-time overlay tool for visualizing bone constraints, joint limits,
-                                and IK targets in Editor.</p>
+                            <h2>1-Click Spherical Impostor System</h2>
+                            <p class="subtitle">High-performance LOD solution for Unity using automated spherical
+                                snapshotting and custom billboard shaders.</p>
 
                             <div class="content-group">
                                 <h3 class="section-title">Description</h3>
-                                <p>An essential tool for technical animators to debug character rigs. It provides visual
-                                    gizmos for rotation limits, velocity vectors, and target influence weights
-                                    directamente in scene view.</p>
+                                <p>A one-click tool to generate ultra-performant billboard-based LODs for complex 3D
+                                    objects. It captures snapshots from hundreds of angles to create a
+                                    perspective-correct representation using a specialized shader.</p>
                             </div>
                         </div>
 
                         <div class="tool-media-panel">
                             <div class="large-video-container">
                                 <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw"
-                                    title="IK Debugger Demo"></iframe>
+                                    title="Spherical Impostor System Demo"></iframe>
                             </div>
                         </div>
                     </div>
@@ -755,29 +756,100 @@
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">1</span>
-                                    <b>Rig Scanning</b>
-                                    <p>Detects SkinnedMeshRenderers and Bone hierarchies.</p>
+                                    <b>Prefab Context Menu</b>
+                                    <p>Right-click any 3D prefab &rarr; "Setup Spherical Impostor" to begin the
+                                        automated setup.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">2</span>
-                                    <b>Gizmo Injection</b>
-                                    <p>Uses Handles API to draw debug info.</p>
+                                    <b>Spherical Snapshotting</b>
+                                    <p>Automated camera rig captures the object from multiple angles to generate a
+                                        texture atlas.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">3</span>
-                                    <b>Data Overlay</b>
-                                    <p>Displays real-time Euler angles and weights.</p>
+                                    <b>Billboard Injection</b>
+                                    <p>Generates a quad billboard using a custom shader that reacts to camera
+                                        perspective.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="flow-step">
                                     <span class="step-icon">4</span>
-                                    <b>Save/Restore</b>
-                                    <p>Allows snapshots of poses for comparison.</p>
+                                    <b>Validation Dashboard</b>
+                                    <p>Centralized hub to monitor and batch-update all tools (IK, Blender Pipeline, and
+                                        Impostors).</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TOOL 4 -->
+                <div class="tool-card classified-project">
+                    <div class="tool-top-row">
+                        <div class="tool-info-panel">
+                            <div class="title-row">
+                                <h2>Automated Cinematic Timeline Generator</h2>
+                                <span class="classified-badge">CLASSIFIED / NDA</span>
+                            </div>
+                            <p class="subtitle">Unity Editor tool for automated cinematic sequence generation focusing
+                                on spline-based camera paths.</p>
+
+                            <div class="content-group">
+                                <h3 class="section-title">Description</h3>
+                                <p>A powerful editor extension that automates the creation of complex Cinemachine
+                                    timelines. By simply defining a spline path, the tool handles all camera tracks,
+                                    blending, and automated orbit/zoom sequences.</p>
+                                <p class="nda-note"><i class="fas fa-lock"></i> Project protected by NDA. Detailed
+                                    internal assets restricted. Displaying workflow and high-level results only.</p>
+                            </div>
+                        </div>
+
+                        <div class="tool-media-panel">
+                            <div class="large-video-container">
+                                <iframe src="https://www.youtube.com/embed/y6120QOlsfU"
+                                    title="Cinematic Timeline Generator Demo"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-workflow-panel">
+                        <h3 class="section-title">Workflow / Flow</h3>
+                        <ul class="flow-list">
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">1</span>
+                                    <b>Spline Path Generation</b>
+                                    <p>Define the cinematic path by clicking directly in the Scene view to create a
+                                        spline.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">2</span>
+                                    <b>Timeline Auto-Setup</b>
+                                    <p>Right-click spline &rarr; "Setup Timeline" to auto-generate tracks and sequences.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">3</span>
+                                    <b>Automated Cinematics</b>
+                                    <p>Injects pre-configured Zoom-in, Orbit, and Zoom-out sequences smoothly.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flow-step">
+                                    <span class="step-icon">4</span>
+                                    <b>Cinemachine Binding</b>
+                                    <p>Automatically binds cameras to the spline path with optimal smoothing and
+                                        framing.</p>
                                 </div>
                             </li>
                         </ul>
