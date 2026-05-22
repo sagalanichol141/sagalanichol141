@@ -97,6 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Video Carousel Logic (for tool cards with multiple videos)
+    document.querySelectorAll('.video-carousel').forEach(carousel => {
+        const slides = carousel.querySelectorAll('.video-slide');
+        const counter = carousel.querySelector('.vid-counter');
+        const prevBtn = carousel.querySelector('.vid-prev-btn');
+        const nextBtn = carousel.querySelector('.vid-next-btn');
+        let current = 0;
+
+        function goTo(index) {
+            slides[current].classList.remove('active');
+            current = (index + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
