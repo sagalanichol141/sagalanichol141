@@ -64,38 +64,60 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Tab Switching Logic
+    // Tab Switching Logic with Hash Routing
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    function activateTab(tabName) {
+        // Validate tab exists
+        const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+        const targetContent = document.getElementById(tabName);
+        if (!targetBtn || !targetContent) return;
+
+        // Update buttons
+        tabBtns.forEach(b => b.classList.remove('active'));
+        targetBtn.classList.add('active');
+
+        // Update content sections
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        targetContent.classList.add('active');
+
+        // Scroll to top of content area on mobile
+        if (window.innerWidth <= 768) {
+            const mainLayout = document.querySelector('.main-layout');
+            if (mainLayout) {
+                window.scrollTo({
+                    top: mainLayout.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    // Click handler: update hash (hashchange listener does the rest)
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const target = btn.dataset.tab;
-
-            // Update buttons
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Update content sections
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === target) {
-                    content.classList.add('active');
-                }
-            });
-
-            // Scroll to top of content area on mobile
-            if (window.innerWidth <= 768) {
-                const mainLayout = document.querySelector('.main-layout');
-                if (mainLayout) {
-                    window.scrollTo({
-                        top: mainLayout.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
+            if (window.location.hash.replace('#', '') !== target) {
+                window.location.hash = target;
+            } else {
+                activateTab(target);
             }
         });
     });
+
+    // Hash change: browser back/forward navigation
+    window.addEventListener('hashchange', () => {
+        const tabName = window.location.hash.replace('#', '') || 'featured-projects';
+        activateTab(tabName);
+    });
+
+    // On page load: read hash and activate
+    const initialTab = window.location.hash.replace('#', '') || 'featured-projects';
+    activateTab(initialTab);
 
     // Video Carousel Logic (for tool cards with multiple videos)
     document.querySelectorAll('.video-carousel').forEach(carousel => {
@@ -116,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
     });
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scroll for anchor links (exclude tab buttons)
+    document.querySelectorAll('a[href^="#"]:not(.tab-btn)').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
