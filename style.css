@@ -58,11 +58,55 @@ body {
     animation: fadeInDown 1s ease-out;
 }
 
+.hero[data-home-link] {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding-bottom: 2rem;
+    border-radius: 0;
+    position: relative;
+}
+
+.hero[data-home-link]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.hero[data-home-link]:hover::after {
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 60px rgba(102, 252, 241, 0.06), inset 0 0 60px rgba(102, 252, 241, 0.02);
+}
+
+.hero[data-home-link]:hover h1 {
+    filter: brightness(1.4);
+    text-shadow: 0 0 30px rgba(102, 252, 241, 0.3);
+}
+
+.hero[data-home-link]:hover p {
+    color: var(--text-main);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInDown 1s ease-out;
+    transition: all 0.4s ease;
+}
+
 .hero p {
     font-size: 1.5rem;
     color: var(--text-muted);
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-out 0.2s both;
+    transition: color 0.4s ease;
 }
 
 .social-links {
@@ -707,6 +751,29 @@ iframe.slide {
     padding: 0.75rem 1rem 0.4rem 1rem;
     font-weight: 800;
     text-shadow: 0 0 20px rgba(0, 119, 255, 0.3);
+}
+
+.version-home-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    color: #e0eaff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(0, 119, 255, 0.08);
+    border: 1px solid rgba(0, 119, 255, 0.2);
+    transition: all 0.25s ease;
+    margin-bottom: 0.2rem;
+}
+
+.version-home-link:hover {
+    background: rgba(0, 119, 255, 0.2);
+    border-color: #4dabf7;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 119, 255, 0.2);
 }
 
 .version-list {

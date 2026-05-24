@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <header class="hero">
+    <header class="hero" data-home-link>
         <h1>NICHOLAS SAGALA</h1>
         <p>Professional Unity Developer & Technical Artist</p>
 
@@ -43,6 +43,7 @@
 
     <div class="main-layout" id="detail-app">
         <nav class="side-tabs version-sidebar">
+            <a class="version-home-link" href="index.html#published-tools">← Home</a>
             <div class="version-sidebar-header">Versions</div>
             <div class="version-list" id="version-list">
                 <!-- populated by JS -->
@@ -118,6 +119,15 @@
                     document.getElementById('detail-title').textContent = 'Failed to load tool data';
                     console.error(err);
                 });
+
+            // Hero click to home (skip social-links)
+            const hero = document.querySelector('[data-home-link]');
+            if (hero) {
+                hero.addEventListener('click', (e) => {
+                    if (e.target.closest('.social-links')) return;
+                    window.location.href = 'index.html';
+                });
+            }
         });
     </script>
 </body>

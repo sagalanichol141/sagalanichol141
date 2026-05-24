@@ -178,4 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(err => console.error('Failed to load published tools:', err));
+
+    // Hero click to home (skip social-links)
+    const hero = document.querySelector('[data-home-link]');
+    if (hero) {
+        hero.addEventListener('click', (e) => {
+            if (e.target.closest('.social-links')) return;
+            window.location.href = 'index.html';
+        });
+    }
 });
