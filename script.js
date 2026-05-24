@@ -153,4 +153,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Render Published Tools from JSON
+    fetch('published-tools.json')
+        .then(res => res.json())
+        .then(data => {
+            const grid = document.getElementById('pub-grid');
+            if (!grid) return;
+            data.tools.forEach(tool => {
+                const card = document.createElement('article');
+                card.className = 'pub-card';
+                card.innerHTML = `
+                    <div class="pub-video">
+                        <iframe src="https://www.youtube.com/embed/${tool.video}" allowfullscreen></iframe>
+                    </div>
+                    <div class="pub-info">
+                        <h3>${tool.title}</h3>
+                        <p class="pub-overview">${tool.overview}</p>
+                        <p class="pub-desc">${tool.description}</p>
+                    </div>
+                    <a class="pub-btn" href="tool-detail.html?tool=${tool.id}" target="_blank">Download .unitypackage</a>
+                `;
+                grid.appendChild(card);
+            });
+        })
+        .catch(err => console.error('Failed to load published tools:', err));
 });

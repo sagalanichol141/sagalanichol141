@@ -1,0 +1,117 @@
+{
+    "tools": [
+        {
+            "id": "terrain-sculptor-pro",
+            "title": "Terrain Sculptor Pro",
+            "overview": "Advanced terrain editing toolkit with real-time sculpting, erosion simulation, and biome-aware texture painting.",
+            "description": "A powerful Unity Editor extension that turns terrain creation into an intuitive, artistic workflow. Features GPU-accelerated brushes, procedural erosion (thermal, hydraulic, wind), splatmap blending with up to 8 layers, and automatic LOD generation for your terrain chunks. Designed for both open-world RPGs and stylized low-poly landscapes.",
+            "video": "IAWOhCYsJzk",
+            "versions": [
+                { "version": "0.1.2", "url": "downloads/terrain-sculptor-pro-0.1.2.unitypackage" },
+                { "version": "0.1.1", "url": "downloads/terrain-sculptor-pro-0.1.1.unitypackage" },
+                { "version": "0.1.0", "url": "downloads/terrain-sculptor-pro-0.1.0.unitypackage" },
+                { "version": "0.0.9", "url": "downloads/terrain-sculptor-pro-0.0.9.unitypackage" },
+                { "version": "0.0.8", "url": "downloads/terrain-sculptor-pro-0.0.8.unitypackage" },
+                { "version": "0.0.7", "url": "downloads/terrain-sculptor-pro-0.0.7.unitypackage" },
+                { "version": "0.0.6", "url": "downloads/terrain-sculptor-pro-0.0.6.unitypackage" },
+                { "version": "0.0.5", "url": "downloads/terrain-sculptor-pro-0.0.5.unitypackage" },
+                { "version": "0.0.4", "url": "downloads/terrain-sculptor-pro-0.0.4.unitypackage" },
+                { "version": "0.0.3", "url": "downloads/terrain-sculptor-pro-0.0.3.unitypackage" },
+                { "version": "0.0.2", "url": "downloads/terrain-sculptor-pro-0.0.2.unitypackage" },
+                { "version": "0.0.1", "url": "downloads/terrain-sculptor-pro-0.0.1.unitypackage" }
+            ],
+            "quickStartSteps": [
+                "Import the package via Assets > Import Package > Custom Package and select the downloaded .unitypackage file.",
+                "Open the tool from Tools > Terrain Sculptor Pro in the Unity top menu bar.",
+                "Select a Terrain object in your scene — the tool automatically detects and loads its data.",
+                "Choose a brush type from the toolbar, adjust size/strength, and start painting directly onto the terrain surface.",
+                "Use the erosion tab to apply realistic weathering effects with adjustable intensity and iteration counts.",
+                "Export your final terrain as a Unity Scene prefab with all LODs and colliders pre-configured."
+            ]
+        },
+        {
+            "id": "ui-canvas-architect",
+            "title": "UI Canvas Architect",
+            "overview": "Visual UI workflow designer that generates responsive Canvas layouts, animation timelines, and event-driven navigation graphs.",
+            "description": "A node-based UI toolkit for Unity that replaces manual Canvas setup with a visual graph editor. Design screens, menu flows, and HUD elements by connecting nodes. Automatically generates anchored layouts for all aspect ratios, creates animation clips for transitions, and wires up event systems with zero code. Ships with 20+ pre-built UI component templates.",
+            "video": "TuLnNFeQk5s",
+            "versions": [
+                { "version": "0.1.2", "url": "downloads/ui-canvas-architect-0.1.2.unitypackage" },
+                { "version": "0.1.1", "url": "downloads/ui-canvas-architect-0.1.1.unitypackage" },
+                { "version": "0.1.0", "url": "downloads/ui-canvas-architect-0.1.0.unitypackage" },
+                { "version": "0.0.9", "url": "downloads/ui-canvas-architect-0.0.9.unitypackage" },
+                { "version": "0.0.8", "url": "downloads/ui-canvas-architect-0.0.8.unitypackage" },
+                { "version": "0.0.7", "url": "downloads/ui-canvas-architect-0.0.7.unitypackage" },
+                { "version": "0.0.6", "url": "downloads/ui-canvas-architect-0.0.6.unitypackage" },
+                { "version": "0.0.5", "url": "downloads/ui-canvas-architect-0.0.5.unitypackage" },
+                { "version": "0.0.4", "url": "downloads/ui-canvas-architect-0.0.4.unitypackage" },
+                { "version": "0.0.3", "url": "downloads/ui-canvas-architect-0.0.3.unitypackage" },
+                { "version": "0.0.2", "url": "downloads/ui-canvas-architect-0.0.2.unitypackage" },
+                { "version": "0.0.1", "url": "downloads/ui-canvas-architect-0.0.1.unitypackage" }
+            ],
+            "quickStartSteps": [
+                "Import the package and navigate to Window > UI Canvas Architect.",
+                "Create a new Canvas Graph from the welcome panel — this opens the node workspace.",
+                "Drag screen nodes from the library panel onto the graph and connect them with transition links.",
+                "Select any node to edit its layout in the inspector — margins, anchors, and scaling are all visual.",
+                "Preview your UI flow using the built-in simulator before exporting to the scene."
+            ]
+        },
+        {
+            "id": "optimization-hawk",
+            "title": "Optimization Hawk",
+            "overview": "Real-time performance analyzer that profiles draw calls, mesh batching, and memory usage with actionable suggestions.",
+            "description": "An always-on profiling overlay for the Unity Editor and builds. Tracks frame timings, GPU/CPU bottlenecks, draw call counts, triangle budgets, and memory allocations in real time. Highlights problematic assets (overly detailed meshes, unoptimized textures, missing LODs) and suggests concrete fixes. Supports custom budget thresholds per platform target.",
+            "video": "fqn9wUE9yIw",
+            "versions": [
+                { "version": "0.1.2", "url": "downloads/optimization-hawk-0.1.2.unitypackage" },
+                { "version": "0.1.1", "url": "downloads/optimization-hawk-0.1.1.unitypackage" },
+                { "version": "0.1.0", "url": "downloads/optimization-hawk-0.1.0.unitypackage" },
+                { "version": "0.0.9", "url": "downloads/optimization-hawk-0.0.9.unitypackage" },
+                { "version": "0.0.8", "url": "downloads/optimization-hawk-0.0.8.unitypackage" },
+                { "version": "0.0.7", "url": "downloads/optimization-hawk-0.0.7.unitypackage" },
+                { "version": "0.0.6", "url": "downloads/optimization-hawk-0.0.6.unitypackage" },
+                { "version": "0.0.5", "url": "downloads/optimization-hawk-0.0.5.unitypackage" },
+                { "version": "0.0.4", "url": "downloads/optimization-hawk-0.0.4.unitypackage" },
+                { "version": "0.0.3", "url": "downloads/optimization-hawk-0.0.3.unitypackage" },
+                { "version": "0.0.2", "url": "downloads/optimization-hawk-0.0.2.unitypackage" },
+                { "version": "0.0.1", "url": "downloads/optimization-hawk-0.0.1.unitypackage" }
+            ],
+            "quickStartSteps": [
+                "Import and enable the tool via Tools > Optimization Hawk > Toggle Overlay.",
+                "A compact HUD appears in the top-right corner of the Game view showing live FPS, draw calls, and batch counts.",
+                "Click the Hawk icon to expand the full dashboard with per-system breakdowns and asset warnings.",
+                "Navigate to the Assets tab to see a prioritized list of optimization targets with estimated gains.",
+                "Apply one-click fixes for common issues like texture compression, mesh LOD generation, and audio compression."
+            ]
+        },
+        {
+            "id": "shader-forge-x",
+            "title": "Shader Forge X",
+            "overview": "Node-based shader editor with real-time preview, vertex animation support, and one-click export to URP/HDRP.",
+            "description": "A visual shader authoring tool that brings the power of node-based editing to Unity's Scriptable Render Pipelines. Create lit/unlit shaders, particle effects, and vertex animations by wiring nodes on an infinite canvas. Real-time preview updates as you edit. Exports directly to .shader files compatible with URP and HDRP. Includes 50+ built-in nodes for math, textures, noise, lighting, and custom functions.",
+            "video": "jICwIRae-7Q",
+            "versions": [
+                { "version": "0.1.2", "url": "downloads/shader-forge-x-0.1.2.unitypackage" },
+                { "version": "0.1.1", "url": "downloads/shader-forge-x-0.1.1.unitypackage" },
+                { "version": "0.1.0", "url": "downloads/shader-forge-x-0.1.0.unitypackage" },
+                { "version": "0.0.9", "url": "downloads/shader-forge-x-0.0.9.unitypackage" },
+                { "version": "0.0.8", "url": "downloads/shader-forge-x-0.0.8.unitypackage" },
+                { "version": "0.0.7", "url": "downloads/shader-forge-x-0.0.7.unitypackage" },
+                { "version": "0.0.6", "url": "downloads/shader-forge-x-0.0.6.unitypackage" },
+                { "version": "0.0.5", "url": "downloads/shader-forge-x-0.0.5.unitypackage" },
+                { "version": "0.0.4", "url": "downloads/shader-forge-x-0.0.4.unitypackage" },
+                { "version": "0.0.3", "url": "downloads/shader-forge-x-0.0.3.unitypackage" },
+                { "version": "0.0.2", "url": "downloads/shader-forge-x-0.0.2.unitypackage" },
+                { "version": "0.0.1", "url": "downloads/shader-forge-x-0.0.1.unitypackage" }
+            ],
+            "quickStartSteps": [
+                "Import and open Shader Forge X from Window > Shader Forge X.",
+                "Create a new shader graph — choose between Lit, Unlit, or Vertex Shader templates.",
+                "Drag nodes from the library onto the canvas and connect them to the Master Stack outputs.",
+                "Use the Preview tab to see your changes in real time on a test mesh.",
+                "Click Export to generate a .shader file ready for your URP or HDRP project."
+            ]
+        }
+    ]
+}

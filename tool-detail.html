@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Detail — Nicholas Sagala</title>
+    <meta name="description" content="Unity Editor Tool by Nicholas Sagala">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <h1>NICHOLAS SAGALA</h1>
+        <p>Professional Unity Developer & Technical Artist</p>
+
+        <div class="social-links">
+            <a href="https://wa.me/628983532189" target="_blank" class="primary-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                WhatsApp
+            </a>
+            <a href="tel:+628983532189">
+                <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Phone">
+                +62-898-3532-189
+            </a>
+            <a href="mailto:nicholas.indonesia1945@gmail.com">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+                Email Me
+            </a>
+            <a href="https://www.youtube.com/@sagalanichol" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                YouTube
+            </a>
+            <a href="https://www.instagram.com/sagalanichol" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://www.tiktok.com/@sagalanicholdev" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+                TikTok
+            </a>
+        </div>
+    </header>
+
+    <div class="main-layout" id="detail-app">
+        <nav class="side-tabs version-sidebar">
+            <div class="version-sidebar-header">Versions</div>
+            <div class="version-list" id="version-list">
+                <!-- populated by JS -->
+            </div>
+        </nav>
+
+        <div class="container tab-content detail-content active">
+            <h2 class="section-title-main" id="detail-title">Loading...</h2>
+
+            <div class="detail-video-section">
+                <span class="detail-video-label">Quick Start / How To Setup</span>
+                <div class="large-video-container">
+                    <iframe id="detail-video" src="" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="detail-quickstart">
+                <div class="detail-readme">
+                    <h3>Overview / Readme</h3>
+                    <p id="detail-readme-text">Loading...</p>
+                </div>
+                <div class="detail-steps">
+                    <h3>Quick Start</h3>
+                    <ol id="detail-steps-list">
+                        <!-- populated by JS -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const toolId = params.get('tool');
+            if (!toolId) {
+                document.getElementById('detail-title').textContent = 'No tool specified';
+                return;
+            }
+
+            fetch('published-tools.json')
+                .then(res => res.json())
+                .then(data => {
+                    const tool = data.tools.find(t => t.id === toolId);
+                    if (!tool) {
+                        document.getElementById('detail-title').textContent = 'Tool not found';
+                        return;
+                    }
+
+                    document.title = tool.title + ' — Nicholas Sagala';
+                    document.getElementById('detail-title').textContent = tool.title;
+                    document.getElementById('detail-video').src = 'https://www.youtube.com/embed/' + tool.video;
+                    document.getElementById('detail-readme-text').textContent = tool.description;
+
+                    const stepsList = document.getElementById('detail-steps-list');
+                    tool.quickStartSteps.forEach(step => {
+                        const li = document.createElement('li');
+                        li.textContent = step;
+                        stepsList.appendChild(li);
+                    });
+
+                    const versionList = document.getElementById('version-list');
+                    tool.versions.forEach(v => {
+                        const a = document.createElement('a');
+                        a.className = 'version-link';
+                        a.href = v.url;
+                        a.textContent = 'v' + v.version + ' .unitypackage';
+                        a.target = '_blank';
+                        versionList.appendChild(a);
+                    });
+                })
+                .catch(err => {
+                    document.getElementById('detail-title').textContent = 'Failed to load tool data';
+                    console.error(err);
+                });
+        });
+    </script>
+</body>
+</html>
